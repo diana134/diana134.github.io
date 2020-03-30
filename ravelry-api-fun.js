@@ -1,8 +1,6 @@
-require('dotenv').config();
-
 RavelryApi = function() {
-    this.authUsername = process.env.BASIC_AUTH_USERNAME;
-    this.authPassword = process.env.BASIC_AUTH_PASSWORD;
+    this.authUsername = 'read-9531653ea66c5cf83c2d327f48243301';
+    this.authPassword = 'Fr+aocI+WWh1n/f4ChAYeV0g6tWxbcXWJizQaNs8';
   };
   
   
