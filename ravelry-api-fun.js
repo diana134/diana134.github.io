@@ -23,16 +23,38 @@ RavelryApi = function() {
   // Retrieve a list of projects for a user: https://www.ravelry.com/api#projects_list
   // Pagination is optional, default is no pagination
   
-  RavelryApi.prototype.projectsList = function(username, page) {
-    const pageSize = 25;
-    const url = 'https://api.ravelry.com/projects/' + username + '/list.json?page=' + page + '&page_size=' + pageSize;
+  RavelryApi.prototype.projectsList = function(username) {
+    const url = 'https://api.ravelry.com/projects/' + username + '/list.json';
     return this.get(url);
   };
 
-  const ravelryClient = new RavelryApi();
-  console.log(ravelryClient.projectsList('wool-rat', 1));
+  // go go go!!!
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const ravelryClient = new RavelryApi();
+
+    ravelryClient.projectsList('wool-rat').then(function(result) {
+        console.log(result.projects);
+        let projects = result.projects;
+
+        let resultsContainer = document.getElementById('results-container');
+
+        // display project thumbnails
+        projects.forEach(project => {
+            const child = document.createElement('li');
+            child.className = 'project__result';
+
+            // show the thumbnail
+            const img = document.createElement('img');
+            img.src = project.first_photo.square_url;
+            img.className = 'project__result__thumbnail';
+            child.appendChild(img);
+
+            // add the child
+            resultsContainer.appendChild(child);
+        });
+    });
+  });
 
 
-
-
-  console.log('done');
+ 
