@@ -30,3 +30,11 @@ RavelryApi = function() {
     const url = this.base + '/projects/' + username + '/list.json?page=' + page + '&page_size=' + pageSize;
     return this.get(url);
   };
+
+  const ravelryClient = new RavelryApi();
+  console.log(ravelryClient.projectsList('wool-rat', 1));
+
+
+
+
+  console.log('done');
