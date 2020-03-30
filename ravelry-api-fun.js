@@ -25,7 +25,7 @@ RavelryApi = function() {
   
   RavelryApi.prototype.projectsList = function(username, page) {
     const pageSize = 25;
-    const url = this.base + '/projects/' + username + '/list.json?page=' + page + '&page_size=' + pageSize;
+    const url = 'https://api.ravelry.com/projects/' + username + '/list.json?page=' + page + '&page_size=' + pageSize;
     return this.get(url);
   };
 
