@@ -1,6 +1,6 @@
 RavelryApi = function() {
-    this.authUsername = 'read-9531653ea66c5cf83c2d327f48243301';
-    this.authPassword = 'Fr+aocI+WWh1n/f4ChAYeV0g6tWxbcXWJizQaNs8';
+    this.authUsername = '';
+    this.authPassword = '';
   };
   
   
