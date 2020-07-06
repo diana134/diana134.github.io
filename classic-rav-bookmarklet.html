@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Diana Carrier | Full Stack Web Developer</title>
+
+    <link rel="icon" href="favicon.ico" type="image/png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300"
+      rel="stylesheet"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+  </head>
+  <body>
+    <main>
+      <p>
+        New Ravelry not accessible for you? Try this to revert to Classic
+        Ravelry:
+      </p>
+      <ol>
+        <li>
+          Add the following link to your bookmarks bar (right click, Add to
+          Bookmarks):
+          <a
+            href='javascript: (function () {
+				var f = document.createElement("form");
+				f.style.display = "none";
+				document.body.appendChild(f);
+				f.method = "POST";
+				f.action = "https://www.ravelry.com/newlook?classic=1&return_to=%2F";
+				var s = document.createElement("input");
+				s.setAttribute("type", "hidden");
+				s.setAttribute("name", "authenticity_token");
+				s.setAttribute("value", "nLsyPo431KE/00tsoz03r2tcBRRMetBA5Vnnv0myskc=");
+				f.appendChild(s);
+				f.submit();
+				return false;
+			  })();
+			  '
+            >Add this link to you bookmarks bar</a
+          >
+        </li>
+        <li>Go to <a href="ravelry.com">ravelry.com</a></li>
+        <li>Click the bookmark you just added.</li>
+      </ol>
+      <p>Voila! Classic Ravelry.</p>
+      <p>
+        This link just runs the javascript code embedded in the Ravelry page
+        that you would normally hit via the button in the dropdown menu. It is
+        meant as a convenience for those who can't find or aren't able to access
+        that button.
+      </p>
+    </main>
+  </body>
+</html>
