@@ -23,15 +23,17 @@
   </head>
   <body>
     <main>
-      <p>
-        New Ravelry not accessible for you? Try this to revert to Classic
-        Ravelry:
-      </p>
+      <div class="intro">
+        New Ravelry not accessible for you?
+      </div>
+      <div class="tagline">
+        Try this to revert to Classic Ravelry:
+      </div>
       <ol>
         <li>
-          Add the following link to your bookmarks bar (right click, Add to
-          Bookmarks):
           <a
+            aria-label="Add this link to your bookmarks bar"
+            title="Add this link to your bookmarks bar."
             href='javascript: (function () {
 				var f = document.createElement("form");
 				f.style.display = "none";
@@ -47,7 +49,7 @@
 				return false;
 			  })();
 			  '
-            >Add this link to you bookmarks bar</a
+            >Add this link to your bookmarks bar</a
           >
         </li>
         <li>Go to <a href="ravelry.com">ravelry.com</a></li>
@@ -61,5 +63,12 @@
         that button.
       </p>
     </main>
+    <footer>
+      <p>
+        Let me know what you think!
+        <a href="https://twitter.com/artemis_134">DM me on Twitter</a> or
+        <a href="mailto:'diana@dianacarrier.com'">send me an email</a>.
+      </p>
+    </footer>
   </body>
 </html>
